@@ -1,6 +1,6 @@
-# Klasifikasi Penyakit Daun Tanaman Cabai Menggunakan Fitur Citra dan Deep Learning
+# Klasifikasi Penyakit Daun Menggunakan Fitur Citra dan Deep Learning
 
-Ini adalah aplikasi desktop berbasis Python menggunakan Tkinter untuk klasifikasi penyakit pada daun tanaman cabai. Aplikasi ini memanfaatkan teknik pemrosesan citra untuk mengekstrak fitur dari daun dan model Deep Learning (Keras) yang telah dilatih untuk memprediksi jenis penyakit.
+Ini adalah aplikasi desktop berbasis Python menggunakan Tkinter untuk klasifikasi penyakit pada daun. Aplikasi ini memanfaatkan teknik pemrosesan citra untuk mengekstrak fitur dari daun dan model Deep Learning (Keras) yang telah dilatih untuk memprediksi jenis penyakit.
 
 ## Fitur Utama
 
