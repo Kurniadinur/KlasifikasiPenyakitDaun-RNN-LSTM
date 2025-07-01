@@ -66,3 +66,42 @@ Ini adalah aplikasi desktop berbasis Python menggunakan Tkinter untuk klasifikas
     * `Pillow` (`PIL`)
 
 ## Struktur Proyek
+
+├── GUI-Perbaikan.py        # Kode utama aplikasi GUI
+├── model9.h5               # File model Deep Learning yang telah dilatih
+├── datatesting.xlsx        # Dataset untuk melatih LabelEncoder dan menguji akurasi model
+└── README.md               # File ini
+
+
+## Penggunaan
+
+1.  **Pastikan Anda memiliki `model9.h5` dan `datatesting.xlsx` di direktori yang sama dengan `GUI-Perbaikan.py`.**
+    * `model9.h5`: Model Keras yang telah dilatih untuk klasifikasi penyakit.
+    * `datatesting.xlsx`: Berisi fitur dan label penyakit yang digunakan untuk inisialisasi `LabelEncoder` dan evaluasi akurasi model. Pastikan file ini memiliki kolom 'Keterangan' dengan label kelas.
+
+2.  **Jalankan Aplikasi:**
+    ```bash
+    python GUI-Perbaikan.py
+    ```
+
+3.  **Langkah-langkah di Aplikasi:**
+    * Klik tombol **"OPEN IMAGE"** untuk memilih gambar daun cabai (format `.png`, `.jpg`, `.jpeg`, dll.).
+    * Setelah gambar dimuat, gambar daun yang sudah diproses (tanpa *background* dan terpotong) akan ditampilkan di bagian **"Normal (Diproses)"**.
+    * Anda dapat melihat berbagai kanal citra dengan mengklik tombol **"HUE"**, **"SATURATION"**, **"VALUE"**, **"GRAYSCALE"**, dan **"SHAPE"**.
+    * Klik tombol **"EKSTRAK CIRI"** untuk memulai proses ekstraksi fitur dari gambar yang dimuat dan melakukan klasifikasi menggunakan model. Sebuah pesan akan muncul setelah proses selesai.
+    * Klik tombol **"DETEKSI PENYAKIT"** untuk melihat hasil klasifikasi penyakit.
+    * Klik tombol **"LIHAT AKURASI"** untuk menampilkan akurasi model secara keseluruhan berdasarkan `datatesting.xlsx`.
+
+## Catatan Penting
+
+* **Model dan Data Pengujian**: Model (`model9.h5`) dan data pengujian (`datatesting.xlsx`) adalah komponen krusial. Pastikan keduanya valid dan sesuai dengan format yang diharapkan oleh kode. `datatesting.xlsx` harus berisi kolom fitur yang sama (nama dan urutan) dengan data yang digunakan untuk melatih model, serta kolom 'Keterangan' untuk label kelas.
+* **Performa**: Untuk gambar beresolusi sangat tinggi, pemrosesan mungkin memakan waktu. Kode telah menyertakan *resizing* awal untuk kinerja yang lebih baik.
+* **Debug**: Pesan *error* dan *print statement* telah disertakan untuk membantu *debugging* jika terjadi masalah.
+
+## Kontribusi
+
+Kontribusi dalam bentuk *bug reports*, *feature requests*, atau *pull requests* sangat dihargai.
+
+---
+
+**Dibuat dengan ❤️ oleh [Kurniadinur]**
